@@ -18,7 +18,6 @@ const TVDetailsPages = () => {
 
     useEffect(() => {
         
-        console.log("run here from TV page",id)
         loadDeatils()
         similarMovies()
         recommendedMovies()

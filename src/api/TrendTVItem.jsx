@@ -68,7 +68,7 @@ const TrendTVItem = (props) => {
         'content-type': 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Yzc4MzgyOTIzYzdmMTZhNzRiNzliY2Y0MmRiY2I4YyIsInN1YiI6IjY1MGE0MTZlMGQ1ZDg1MDBmZGI3NTBkNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5vlhHdCU3GL4v5Tirdkb84CfhgTRB-kYoOx2IotsQK0'
       },
-      body: JSON.stringify({ media_type: 'movie', media_id: props.id, favorite: false })
+      body: JSON.stringify({ media_type: 'tv', media_id: props.id, favorite: false })
     };
 
     fetch(url, options)
@@ -76,11 +76,11 @@ const TrendTVItem = (props) => {
       .then(json => console.log(json))
       .catch(err => console.error('error:' + err));
 
-    fetch(url, options)
-      .then(res => res.json())
-      .then(json => console.log(json))
-      .catch(err => console.error('error:' + err));
-  }
+  //   fetch(url, options)
+  //     .then(res => res.json())
+  //     .then(json => console.log(json))
+  //     .catch(err => console.error('error:' + err));
+   }
 
 
   function truncateText(text, maxLength) {

@@ -1,5 +1,5 @@
 
-import TrendMovieItem from "./TrendMovieItem"
+import TrendTVItem from "./TrendTVItem"
 
 
 const TrendTVList = (props) => {
@@ -19,13 +19,13 @@ const TrendTVList = (props) => {
             {/* Display a list of trending movies */}
             <ul className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {props.trendMovies.map((movie) => (
-                    <TrendMovieItem
+                    <TrendTVItem
                         key={movie.id}
                         id={movie.id}
-                        title={movie.title}
+                        title={movie.name}
                         overview={movie.overview}
                         image={movie.poster_path}
-                        releaseDate={movie.release_date}
+                        releaseDate={movie.first_air_date}
                         lang={movie.original_language}
                     />
                 ))}
